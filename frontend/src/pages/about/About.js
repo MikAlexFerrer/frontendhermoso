@@ -4,20 +4,21 @@ import "./about.css"
 export default function About() {
     return (
         <>
-       <div className="header">
-        <div className="headerTitles">
-          <span className="headerTitleLg">About Us</span>
-        </div>
+       
         <img
           className="headerImg"
           src="https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
         />
+        <div className="header">
+        <div className="headerTitles">
+          <span className="headerTitleLg">About Us</span>
+        </div>
       </div>
       <section className="dashboard-sections">
         <div className="section-1-container mt-5">
           <h1 className="text-center">Get to know us</h1>
-          <div className="wrapper d-flex justify-content-center flex-wrap justify">
+          <div className="wrapper d-flex justify-content-center flex-wrap justify mt-5 smallfont">
             <p>
               Founded in 2021 in Guadalajara, Endurance.com has grown from a
               small school project to a less small school project.
