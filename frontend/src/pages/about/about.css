@@ -1,10 +1,10 @@
 .dashboard-sections{
   margin-top: 10rem;
+  margin-top: 0;
 }
 .section-1-container {
 margin: 35px 15% 5% 15%;
 }
-
 .section-1-content {
 width: 45%;
 height: 400px;
@@ -42,7 +42,6 @@ margin: 1rem;
   background-position: center;
      object-fit: cover;
 }
-
 .flex-item-2{
       background: url("https://i.ibb.co/bNm2RSv/a-retro-telephone-on-the-bedside-table-2843400.jpg");
       background-repeat: no-repeat;
@@ -60,7 +59,6 @@ margin: 1rem;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
-
 .section-4-content {
   height: 70vh;
   width: 50%;
@@ -73,12 +71,9 @@ margin: 1rem;
   -o-object-fit: cover;
      object-fit: cover;  
   }
-
  .para {
   margin: 5rem;
 }
-
-
 @media only screen and (max-width: 768px) {
 .section-1-container {
   margin: 1rem;
@@ -105,7 +100,6 @@ margin: 1rem;
   font-size: 1rem;    
   letter-spacing: 1px;
 }
-
 .section-4-wrapper {
   flex-direction: column;
 }
@@ -124,25 +118,39 @@ text-align: justify;
 }
 .header {
 margin-top: 60px;
+
+margin-top: 0;
 }
 
-.headerTitles {
-display: flex;
-flex-direction: column;
-align-items: center;
-font-family: "Arial", serif;
-color: #444;
-}
-
-.headerTitleLg {
-position: absolute;
-top: 20%;
-font-size: 100px;
-}
+.header {
+  margin-top: 60px;
+  
+  margin-top: 0;
+  }
+  
+  .headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial", serif;
+  color: #444;
+  }
+  .headerTitleLg {
+  position: absolute;
+  top: 20%;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  }
 
 .headerImg{
 width: 100%;
 height: 450px;
 margin-top: 80px;
+margin-top: 0px;
 object-fit: cover;
+filter: brightness(60%);
 }
+.smallfont{
+  font-size: 22px;
+} 

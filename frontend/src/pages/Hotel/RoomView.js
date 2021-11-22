@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./roomView.css";
 import Carousel from 'react-bootstrap/Carousel';
 import hotelData from "../../data/hotels.json"
+import Badge from "react-bootstrap/Badge";
 import Booking from './Hotel';
 import { useLocation } from "react-router";
 
@@ -76,7 +77,7 @@ export function RoomView(props) {
             <section>
                 <div className="container">
                     <div className="mb-4">
-                        <h2>{state.hotel.hotelName}</h2>
+                        <h2>{state.hotel.name}</h2>
                         <h5 className="font-weight-bold">{RenderStars(state.hotel.star)}</h5>
                     </div>
                     <div className="d-flex roomview-wrapper">
@@ -96,19 +97,19 @@ export function RoomView(props) {
                         <ul className="list-group">
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Free WiFi
-    <span className="badge badge-primary badge-pill ">{state.hotel.wifi === "Yes" ? <>&#10004;</> : <>&#10006;</>}</span>
+     <Badge bg="success">{state.hotel.wifi === "Yes" ? <>&#10004;</> : <>&#10006;</>}</Badge>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Parking
-    <span className="badge badge-primary badge-pill ">{state.hotel.parking === "Yes" ? <>&#10004;</> : <>&#10006;</>}</span>
+    <Badge bg="success">{state.hotel.parking === "Yes" ? <>&#10004;</> : <>&#10006;</>}</Badge>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Swimming Pool
-    <span className="badge badge-primary badge-pill ">{state.hotel.swimmingPool === "Yes" ? <>&#10004;</> : <>&#10006;</>}</span>
+    <Badge bg="success">{state.hotel.swimmingPool === "Yes" ? <>&#10004;</> : <>&#10006;</>}</Badge>
                             </li>
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 Fitness Center
-    <span className="badge badge-primary badge-pill ">{state.hotel.fitness_center === "Yes" ? <>&#10004;</> : <>&#10006;</>}</span>
+    <Badge bg="success">{state.hotel.fitness_center === "Yes" ? <>&#10004;</> : <>&#10006;</>}</Badge>
                             </li>
                         </ul>
                     </div>
@@ -132,11 +133,11 @@ export function RoomView(props) {
                         <ul className="list-group-flush col-6">
                             <li className="list-group-item"><h5 className="font-weight-bold">Available Rooms</h5>
                                 <p>{state.hotel.availableRooms}</p></li>
-                            <li className="list-group-item"><h5 className="font-weight-bold">Bed Rooms</h5>
+                            <li className="list-group-item"><h5 className="font-weight-bold">Number of Beds</h5>
                                 <p>{state.hotel.bedRooms}</p></li>
-                            <li className="list-group-item"><h5 className="font-weight-bold">Maximum Adults Allow</h5>
+                            <li className="list-group-item"><h5 className="font-weight-bold">Maximum Adults Allowed</h5>
                                 <p>{state.hotel.maximumAdultsAllow}</p></li>
-                            <li className="list-group-item"><h5 className="font-weight-bold">Maximum Childs Allow</h5>
+                            <li className="list-group-item"><h5 className="font-weight-bold">Maximum Children Allowed</h5>
                                 <p>{state.hotel.maximumChildsAllow}</p></li>
                         </ul>
 

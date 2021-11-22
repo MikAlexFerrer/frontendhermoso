@@ -45,7 +45,7 @@ export default function TopBar() {
               </Nav.Link>
             </li>
             <Nav.Link className="topListItem" onClick={handleLogout}>
-              {user && "LOGOUT"}
+              {user && "LOG OUT"}
             </Nav.Link>
           </Nav>
           <div className="topRight">

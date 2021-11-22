@@ -40,8 +40,9 @@ export default function HotelFilter() {
     }
 
     return (
-        <div className="container fullH mt-5">
-            <h2 className="">Available Cities</h2>
+        <div className="container mt-lg-5">
+            <div>
+            <h2 className="center">Available Cities</h2>
             <div className="d-md-flex">
                 {
                     cityResult.map((hotel, index) => {
@@ -75,7 +76,7 @@ export default function HotelFilter() {
                                             <p>{hotel.city.toUpperCase()}</p>
                                         </div>
                                         <div className="p-2 text-right bg-light">
-                                            <h2 className="font-weight-bold">‎₹‎{hotel.price}</h2>
+                                            <h2 className="font-weight-bold">‎$‎{hotel.price}</h2>
                                             <small className="form-text text-muted font-weight-light">
                                                 Per Night
               <br />
@@ -89,7 +90,9 @@ export default function HotelFilter() {
                     })
                     }
                 </div>
+                
             </section>
+        </div>
         </div>
     )
 }

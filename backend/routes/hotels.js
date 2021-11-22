@@ -1,9 +1,8 @@
 const router = require("express").Router();
-const User = require("../models/User");
 const Hotel = require("../models/Hotel");
 
 //CREATE HOTEL RESERVATION
-router.post("/", async (req, res) => {
+router.post("/reservations", async (req, res) => {
   const newHotel = new Hotel(req.body);
   try {
     const savedHotel = await newHotel.save();

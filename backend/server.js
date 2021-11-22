@@ -3,7 +3,6 @@ const app = express()
 const mongoose = require("mongoose")
 const authRouter = require("./routes/auth")
 const userRouter = require("./routes/users")
-const flightRoute = require("./routes/flights")
 const hotelRoute = require("./routes/hotels")
 const multer = require("multer")
 const path = require("path")
@@ -11,7 +10,7 @@ const path = require("path")
 app.use(express.json())
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
-mongoose.connect('mongodb://localhost/travel');
+mongoose.connect('mongodb://localhost/sitetravel');
 
 const storage = multer.diskStorage ({
     destination:(req, file, cb) => {
@@ -28,7 +27,6 @@ app.post("/backend/upload", upload.single("file"), (req, res) => {
 
 app.use("/backend/auth", authRouter)
 app.use("/backend/users", userRouter)
-app.use("/backend/flights", flightRoute)
 app.use("/backend/hotels", hotelRoute)
 
 app.listen("5000", () => {

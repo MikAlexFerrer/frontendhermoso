@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const HotelReservationSchema = new mongoose.Schema(
+const ReservationsSchema = new mongoose.Schema(
   {
     hotel: {
       type: String,
@@ -18,10 +18,6 @@ const HotelReservationSchema = new mongoose.Schema(
     price: {
       type: String,
       required: false,
-    },
-    datebought: {
-      type: Date,
-      default: Date.now
     },
     checkIn: {
       type: String,
@@ -43,4 +39,4 @@ const HotelReservationSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("HotelReservation", HotelReservationSchema);
+module.exports = mongoose.model("Reservations", ReservationsSchema);

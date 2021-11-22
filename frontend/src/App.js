@@ -1,7 +1,6 @@
 import Home from "./pages/home/Home";
 import TopBar from "./components/Topbar/Topbar";
 import Reservations from "./pages/reservations/Reservations";
-import Flights from "./pages/flights/Flights";
 import HotelFilter from "./pages/hotels/Hotels";
 import { RoomView } from './pages/Hotel/RoomView';
 import About from "./pages/about/About";
@@ -17,7 +16,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const { user } = useContext(Context);
-  console.log(Context)
   return (
     <Router>
       <TopBar />
@@ -27,13 +25,12 @@ function App() {
         </Route>
         <Route path="/register">{user ? <Home /> : <Register />}</Route>
         <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        <Route path="/flights">{user ? <Flights /> : <Register />}</Route>
-        <Route path="/hotels">{user ? <HotelFilter /> : <Register />}</Route>
-        <Route path="/hotel/:id">{user ? <RoomView /> : <Register />}</Route>
+        <Route path="/hotels">{user ? <HotelFilter /> : <Login />}</Route>
+        <Route path="/hotel/:id">{user ? <RoomView /> : <Login />}</Route>
         <Route path="/about"><About /></Route>
         <Route path="/contact"><Contact /></Route>
-        <Route path="/reservations">{user ? <Reservations /> : <Register />}</Route>
-        <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
+        <Route path="/reservations">{user ? <Reservations /> : <Login />}</Route>
+        <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
       </Switch>
     </Router>
   );
