@@ -56,12 +56,12 @@ export default function TopBar() {
                ) : (
               <ul className="topList">
                 <li className="topListItem">
-                  <Nav.Link className="link" to="/login">
+                  <Nav.Link className="link" href="/login">
                     LOGIN
                   </Nav.Link>
                 </li>
                 <li className="topListItem">
-                  <Nav.Link className="link" to="/register">
+                  <Nav.Link className="link" href="/register">
                     REGISTER
                   </Nav.Link>
                 </li>

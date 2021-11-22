@@ -4,7 +4,7 @@ function Header({ placeholder, data }) {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleLg">Blog</span>
+        <span className="headerTitleLg">Endurance</span>
       </div>
       <img
         className="headerImg"

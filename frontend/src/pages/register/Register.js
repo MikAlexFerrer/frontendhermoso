@@ -18,6 +18,7 @@ export default function Register() {
         email,
         password,
       });
+      console.log(res)
       res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
@@ -28,21 +29,21 @@ export default function Register() {
       <span className="registerTitle">Register</span>
       <form className="registerForm" onSubmit={handleSubmit}>
         <label>Username</label>
-        <input
+        <input required 
           type="text"
           className="registerInput"
           placeholder="Enter your username..."
           onChange={(e) => setUsername(e.target.value)}
         />
         <label>Email</label>
-        <input
+        <input required 
           type="text"
           className="registerInput"
           placeholder="Enter your email..."
           onChange={(e) => setEmail(e.target.value)}
         />
         <label>Password</label>
-        <input
+        <input required 
           type="password"
           className="registerInput"
           placeholder="Enter your password..."

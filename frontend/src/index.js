@@ -1,21 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import {
-    BrowserRouter as Router, Switch, Route
-} from "react-router-dom";
+import { ContextProvider } from "./context/Context";
 
-
-
-const Home = () => {
-    return (
-        <Router>
-            <Switch>
-                <Route path="/" component={App} />
-            </Switch>
-        </Router>
-    )
-}
-
-
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);

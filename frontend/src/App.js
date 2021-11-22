@@ -17,21 +17,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const { user } = useContext(Context);
+  console.log(Context)
   return (
     <Router>
       <TopBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home/>
         </Route>
         <Route path="/register">{user ? <Home /> : <Register />}</Route>
         <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        <Route path="/flights">{user ? <Flights /> : <Login />}</Route>
-        <Route path="/hotels">{user ? <HotelFilter /> : <Login />}</Route>
-        <Route path="/hotel/:id">{user ? <RoomView /> : <Login />}</Route>
-        <Route path="/aboutus"><About /></Route>
+        <Route path="/flights">{user ? <Flights /> : <Register />}</Route>
+        <Route path="/hotels">{user ? <HotelFilter /> : <Register />}</Route>
+        <Route path="/hotel/:id">{user ? <RoomView /> : <Register />}</Route>
+        <Route path="/about"><About /></Route>
         <Route path="/contact"><Contact /></Route>
-        <Route path="/reservations">{user ? <Reservations /> : <Login />}</Route>
+        <Route path="/reservations">{user ? <Reservations /> : <Register />}</Route>
         <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
       </Switch>
     </Router>

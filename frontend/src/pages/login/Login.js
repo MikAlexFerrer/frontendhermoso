@@ -28,14 +28,14 @@ export default function Login() {
       <span className="loginTitle">Login</span>
       <form className="loginForm" onSubmit={handleSubmit}>
         <label>Username</label>
-        <input
+        <input required
           type="text"
           className="loginInput"
           placeholder="Enter your username..."
           ref={userRef}
         />
         <label>Password</label>
-        <input
+        <input required
           type="password"
           className="loginInput"
           placeholder="Enter your password..."
